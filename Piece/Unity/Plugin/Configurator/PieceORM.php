@@ -39,6 +39,7 @@
 
 require_once 'Piece/Unity/Plugin/Common.php';
 require_once 'Piece/ORM.php';
+require_once 'Piece/Unity/Error.php';
 
 // {{{ Piece_Unity_Plugin_Configurator_PieceORM
 
