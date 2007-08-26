@@ -40,11 +40,24 @@ require_once 'PEAR/PackageFileManager2.php';
 
 PEAR::staticPushErrorHandling(PEAR_ERROR_CALLBACK, create_function('$error', 'var_dump($error); exit();'));
 
-$releaseVersion = '1.0.0';
+$releaseVersion = '1.1.0';
 $releaseStability = 'stable';
 $apiVersion = '1.0.0';
 $apiStability = 'stable';
-$notes = 'The first release of Piece_Unity_Component_PieceORM.';
+$notes = 'A new release of Piece_Unity_Component_PieceORM is now available.
+
+What\'s New in Piece_Unity_Component_PieceORM 1.1.0
+
+ * Configurator_EnvHandler_PieceORM plug-in: This plug-in can be used to set whether the current environment is production or not to the Piece_ORM environment.
+
+See the following release notes for details.
+
+Enhancements
+============ 
+
+Plug-ins:
+
+- Added Configurator_EnvHandler_PieceORM plug-in to set whether the current environment is production or not to the Piece_ORM environment.';
 
 $package = new PEAR_PackageFileManager2();
 $package->setOptions(array('filelistgenerator' => 'svn',
@@ -73,17 +86,15 @@ $package->setReleaseStability($releaseStability);
 $package->setNotes($notes);
 $package->setPhpDep('4.3.0');
 $package->setPearinstallerDep('1.4.3');
-$package->addPackageDepWithChannel('required', 'Piece_Unity', 'pear.piece-framework.com', '1.0.0');
-$package->addPackageDepWithChannel('required', 'Piece_ORM', 'pear.piece-framework.com', '0.3.0');
+$package->addPackageDepWithChannel('required', 'Piece_Unity', 'pear.piece-framework.com', '1.1.0');
+$package->addPackageDepWithChannel('required', 'Piece_ORM', 'pear.piece-framework.com', '0.5.0');
 $package->addPackageDepWithChannel('optional', 'PHPUnit', 'pear.phpunit.de', '1.3.2');
 $package->addPackageDepWithChannel('optional', 'Cache_Lite', 'pear.php.net', '1.7.0');
 $package->addMaintainer('lead', 'iteman', 'KUBO Atsuhiro', 'iteman@users.sourceforge.net');
 $package->addGlobalReplacement('package-info', '@package_version@', 'version');
 $package->generateContents();
 
-if (array_key_exists(1, $_SERVER['argv'])
-    && $_SERVER['argv'][1] == 'make'
-    ) {
+if (array_key_exists(1, $_SERVER['argv']) && $_SERVER['argv'][1] == 'make') {
     $package->writePackageFile();
 } else {
     $package->debugPackageFile();

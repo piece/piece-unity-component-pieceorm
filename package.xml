@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Id$ -->
-<package packagerversion="1.5.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+<package packagerversion="1.6.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
     http://pear.php.net/dtd/tasks-1.0.xsd
     http://pear.php.net/dtd/package-2.0
     http://pear.php.net/dtd/package-2.0.xsd">
@@ -14,10 +14,10 @@
   <email>iteman@users.sourceforge.net</email>
   <active>yes</active>
  </lead>
- <date>2007-07-18</date>
- <time>19:19:31</time>
+ <date>2007-08-26</date>
+ <time>22:36:11</time>
  <version>
-  <release>1.0.0</release>
+  <release>1.1.0</release>
   <api>1.0.0</api>
  </version>
  <stability>
@@ -25,13 +25,31 @@
   <api>stable</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD License (revised)</license>
- <notes>The first release of Piece_Unity_Component_PieceORM.</notes>
+ <notes>A new release of Piece_Unity_Component_PieceORM is now available.
+
+What&apos;s New in Piece_Unity_Component_PieceORM 1.1.0
+
+ * Configurator_EnvHandler_PieceORM plug-in: This plug-in can be used to set whether the current environment is production or not to the Piece_ORM environment.
+
+See the following release notes for details.
+
+Enhancements
+============ 
+
+Plug-ins:
+
+- Added Configurator_EnvHandler_PieceORM plug-in to set whether the current environment is production or not to the Piece_ORM environment.</notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <dir name="Piece">
     <dir name="Unity">
      <dir name="Plugin">
       <dir name="Configurator">
+       <dir name="EnvHandler">
+        <file name="PieceORM.php" role="php">
+         <tasks:replace from="@package_version@" to="version" type="package-info" />
+        </file>
+       </dir> <!-- /Piece/Unity/Plugin/Configurator/EnvHandler -->
        <file name="PieceORM.php" role="php">
         <tasks:replace from="@package_version@" to="version" type="package-info" />
        </file>
@@ -73,12 +91,12 @@
    <package>
     <name>Piece_Unity</name>
     <channel>pear.piece-framework.com</channel>
-    <min>1.0.0</min>
+    <min>1.1.0</min>
    </package>
    <package>
     <name>Piece_ORM</name>
     <channel>pear.piece-framework.com</channel>
-    <min>0.3.0</min>
+    <min>0.5.0</min>
    </package>
   </required>
   <optional>
@@ -96,6 +114,32 @@
  </dependencies>
  <phprelease />
  <changelog>
+  <release>
+   <version>
+    <release>1.1.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2007-08-26</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">BSD License (revised)</license>
+   <notes>A new release of Piece_Unity_Component_PieceORM is now available.
+
+What&apos;s New in Piece_Unity_Component_PieceORM 1.1.0
+
+ * Configurator_EnvHandler_PieceORM plug-in: This plug-in can be used to set whether the current environment is production or not to the Piece_ORM environment.
+
+See the following release notes for details.
+
+Enhancements
+============ 
+
+Plug-ins:
+
+- Added Configurator_EnvHandler_PieceORM plug-in to set whether the current environment is production or not to the Piece_ORM environment.</notes>
+  </release>
   <release>
    <version>
     <release>1.0.0</release>
