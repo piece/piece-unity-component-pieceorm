@@ -127,9 +127,9 @@ class Piece_Unity_Plugin_Configurator_PieceORMTestCase extends PHPUnit_TestCase
             $this->assertEquals($configuration['options'], $config->getOptions($configuration['name']));
         }
 
-        $this->assertEquals($this->_cacheDirectory, Piece_ORM_Mapper_Factory::setConfigDirectory('./foo'));
-        $this->assertEquals($this->_cacheDirectory, Piece_ORM_Mapper_Factory::setCacheDirectory('./bar'));
-        $this->assertEquals($this->_cacheDirectory, Piece_ORM_Metadata_Factory::setCacheDirectory('./baz'));
+        $this->assertEquals($this->_cacheDirectory, $GLOBALS['PIECE_ORM_Mapper_ConfigDirectory']);
+        $this->assertEquals($this->_cacheDirectory, $GLOBALS['PIECE_ORM_Mapper_CacheDirectory']);
+        $this->assertEquals($this->_cacheDirectory, $GLOBALS['PIECE_ORM_Metadata_CacheDirectory']);
     }
 
     /**#@-*/
