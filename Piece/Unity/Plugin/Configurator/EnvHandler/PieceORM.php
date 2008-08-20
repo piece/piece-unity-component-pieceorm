@@ -109,4 +109,3 @@ class Piece_Unity_Plugin_Configurator_EnvHandler_PieceORM extends Piece_Unity_Pl
  * indent-tabs-mode: nil
  * End:
  */
-?>
